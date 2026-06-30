@@ -1,0 +1,175 @@
+.about {
+  background: #05080f;
+  padding: 100px 50px;
+  position: relative;
+}
+
+.about__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ══════════════════════════════
+   LEFT COLUMN
+══════════════════════════════ */
+.about__left-col {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about__image-card {
+  width: 100%;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* 2×2 stat grid */
+.about__stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.about__stat-card {
+  background: rgba(13, 20, 40, 0.7);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 14px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-num {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #3b82f6;
+  line-height: 1;
+}
+
+.stat-lbl {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* ══════════════════════════════
+   RIGHT COLUMN
+══════════════════════════════ */
+.about__text-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 8px;
+}
+
+.about__label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #3b82f6;
+  text-transform: uppercase;
+}
+
+.about__heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.heading-green {
+  color: #3b82f6;
+}
+
+.about__para {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  line-height: 1.8;
+}
+
+/* Skills checklist — 2 columns */
+.about__skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  margin-top: 4px;
+}
+
+.about__skill-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #d1d5db;
+  line-height: 1.4;
+}
+
+.skill-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Download CV button */
+.about__cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  background: #3b82f6;
+  color: #070d1a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 10px;
+  width: fit-content;
+  margin-top: 8px;
+  transition: all 0.25s;
+}
+
+.about__cv-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 960px) {
+  .about {
+    padding: 60px 24px;
+  }
+
+  .about__content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about__left-col {
+    flex: none;
+    width: 100%;
+  }
+
+  .about__image-card {
+    height: 300px;
+  }
+
+  .about__skills {
+    grid-template-columns: 1fr;
+  }
+}

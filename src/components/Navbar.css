@@ -1,0 +1,219 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar__logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.logo-white {
+  color: #ffffff;
+}
+
+.logo-green {
+  color: #3b82f6;
+}
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+}
+
+.navbar__links li a {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar__links li a:hover {
+  color: #3b82f6;
+}
+
+.navbar__actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-whatsapp,
+.btn-linkedin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-whatsapp {
+  background: transparent;
+  border: 1.5px solid rgba(59, 130, 246, 0.4);
+  color: #d1d5db;
+}
+
+.btn-whatsapp:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.btn-linkedin {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-linkedin:hover {
+  background: #2563eb;
+}
+
+.navbar--scrolled {
+  background: rgba(7, 8, 18, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+/* ── Hamburger button ── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 200;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #d1d5db;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.2s;
+}
+
+.navbar__hamburger:hover span {
+  background: #3b82f6;
+}
+
+/* Animate to X when open */
+.navbar__hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar__hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.navbar__hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile drawer ── */
+.navbar__mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(7, 8, 18, 0.97);
+  backdrop-filter: blur(20px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  z-index: 150;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.navbar__mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.navbar__mobile-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__mobile-links li a {
+  color: #d1d5db;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.navbar__mobile-links li a:hover {
+  color: #3b82f6;
+}
+
+.navbar__mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.navbar__mobile-actions .btn-whatsapp,
+.navbar__mobile-actions .btn-linkedin {
+  width: 100%;
+  max-width: 260px;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+}
+
+/* ── Responsive breakpoints ── */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  .navbar__links,
+  .navbar__actions {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__mobile-menu {
+    display: flex;
+  }
+}
