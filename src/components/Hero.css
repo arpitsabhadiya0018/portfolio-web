@@ -226,7 +226,7 @@
 /* ── SCROLL INDICATOR ── */
 .hero__scroll {
   position: absolute;
-  bottom: 32px;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   color: #4b5563;
