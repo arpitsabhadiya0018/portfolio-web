@@ -226,3 +226,37 @@
     padding: 24px 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 50px 16px;
+  }
+
+  .experience__heading {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .exp-card {
+    padding: 20px 16px;
+    gap: 14px;
+  }
+
+  .exp-card__avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .exp-card__role {
+    font-size: 0.95rem;
+  }
+
+  .exp-card__desc {
+    font-size: 0.82rem;
+  }
+
+  .exp-card__meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

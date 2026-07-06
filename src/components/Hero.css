@@ -252,25 +252,69 @@
     gap: 40px;
   }
 
+  .hero__left {
+    align-items: center;
+    width: 100%;
+  }
+
   .hero__badge {
     margin: 0 auto;
   }
 
   .hero__desc {
     max-width: 100%;
+    text-align: center;
   }
 
   .hero__cta {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .hero__image-ring {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
   }
 
-  .hero__stats-top {
+  .hero__stats-card {
     right: -10px;
     top: 0;
+    padding: 10px 14px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .hero__exp-badge {
+    font-size: 0.78rem;
+    padding: 8px 14px;
+    bottom: 16px;
+    left: 8px;
+  }
+
+  .hero__right {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 90px 16px 50px;
+  }
+
+  .hero__name {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .hero__image-ring {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    justify-content: center;
   }
 }

@@ -175,4 +175,26 @@
     text-align: center;
     gap: 8px;
   }
+@media (max-width: 480px) {
+  .footer__inner {
+    padding: 36px 16px 24px;
+  }
+
+  .footer__logo {
+    font-size: 1.1rem;
+  }
+
+  .footer__tagline {
+    font-size: 0.82rem;
+  }
+
+  .footer__nav-list li a {
+    font-size: 0.85rem;
+  }
+
+  .footer__icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
 }

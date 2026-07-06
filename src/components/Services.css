@@ -124,3 +124,21 @@
     border-right: none;
   }
 }
+
+@media (max-width: 480px) {
+  .services {
+    padding: 50px 16px;
+  }
+
+  .services__header {
+    margin-bottom: 40px;
+  }
+
+  .service-card {
+    padding: 28px 20px;
+  }
+
+  .services__heading {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+}

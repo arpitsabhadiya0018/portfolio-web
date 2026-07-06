@@ -35,4 +35,36 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal overflow on all screens */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Better tap targets on mobile */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Prevent text from being too small */
+  body {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Tighter section headings on small screens */
+  h1, h2, h3 {
+    word-break: break-word;
+  }
+}
 }
